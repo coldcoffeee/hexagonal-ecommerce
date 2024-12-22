@@ -13,4 +13,7 @@ public class ProductResponseDTO {
     private UUID id;
     private String name;
     private BigDecimal price;
+    private Integer quantity;
+
+    private String description;
 }

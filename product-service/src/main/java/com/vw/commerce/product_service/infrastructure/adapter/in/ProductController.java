@@ -26,6 +26,8 @@ public class ProductController {
         var product = new Product();
         product.setName(productDTO.getName());
         product.setPrice(productDTO.getPrice());
+        product.setDescription(productDTO.getDescription());
+        product.setQuantity(productDTO.getQuantity());
         productService.createProduct(product);
         return new ResponseEntity<>("Product created successfully!", HttpStatus.CREATED);
     }
@@ -40,6 +42,8 @@ public class ProductController {
         responseDTO.setId(product.getId());
         responseDTO.setName(product.getName());
         responseDTO.setPrice(product.getPrice());
+        responseDTO.setQuantity(product.getQuantity());
+        responseDTO.setDescription(product.getDescription());
         return ResponseEntity.ok(responseDTO);
     }
 }
